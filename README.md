@@ -24,3 +24,4 @@ Contributing
 ------------
 See our [developers handbook](https://vufind.org/wiki/development) for more information.
 # vufind
+# vufind
