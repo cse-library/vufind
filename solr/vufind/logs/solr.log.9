@@ -1,0 +1,38 @@
+2018-11-18 10:19:26.956 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.8.v20171121, build timestamp: 2017-11-21T21:27:37Z, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2018-11-18 10:19:27.414 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 7.3.1
+2018-11-18 10:19:27.415 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8080
+2018-11-18 10:19:27.415 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /usr/local/vufind/solr/vendor
+2018-11-18 10:19:27.435 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-11-18T10:19:27.417Z
+2018-11-18 10:19:27.437 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-11-18 10:19:27.465 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /usr/local/vufind/solr/vufind
+2018-11-18 10:19:27.475 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /usr/local/vufind/solr/vufind/solr.xml
+2018-11-18 10:19:28.225 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 4 core definitions underneath /usr/local/vufind/solr/vufind
+2018-11-18 10:19:28.226 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [authority, biblio, reserves, website]
+2018-11-18 10:19:28.235 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-11-18 10:19:28.339 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrResourceLoader [biblio] Added 14 libs to classloader, from paths: [/usr/local/vufind/solr/vendor/contrib/analysis-extras/lib, /usr/local/vufind/solr/vendor/contrib/analysis-extras/lucene-libs, /usr/local/vufind/solr/vufind/jars]
+2018-11-18 10:19:28.362 INFO  (main) [   ] o.e.j.s.Server Started @2107ms
+2018-11-18 10:19:28.637 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.3.1
+2018-11-18 10:19:28.874 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.s.IndexSchema [biblio] Schema name=VuFind Bibliographic Index
+2018-11-18 10:19:29.316 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.s.IndexSchema Loaded schema VuFind Bibliographic Index/1.2 with uniqueid field id
+2018-11-18 10:19:29.541 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.CoreContainer Creating SolrCore 'biblio' using configuration from instancedir /usr/local/vufind/solr/vufind/biblio, trusted=true
+2018-11-18 10:19:29.586 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-11-18 10:19:29.596 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrCore [[biblio] ] Opening new SolrCore at [/usr/local/vufind/solr/vufind/biblio], dataDir=[/usr/local/vufind/solr/vufind/biblio/]
+2018-11-18 10:19:29.658 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-11-18 10:19:29.993 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-11-18 10:19:29.993 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-11-18 10:19:30.006 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-11-18 10:19:30.006 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-11-18 10:19:30.090 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.s.SolrIndexSearcher Opening [Searcher@2908b7bd[biblio] main]
+2018-11-18 10:19:30.105 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /usr/local/vufind/solr/vufind/biblio/conf
+2018-11-18 10:19:30.129 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-11-18 10:19:30.137 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.h.c.SpellCheckComponent Registering newSearcher listener for spellchecker: default
+2018-11-18 10:19:30.138 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.h.c.SpellCheckComponent Registering newSearcher listener for spellchecker: basicSpell
+2018-11-18 10:19:30.142 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /usr/local/vufind/solr/vufind/biblio/conf/elevate.xml
+2018-11-18 10:19:30.157 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-11-18 10:19:30.258 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1617466616979652608
+2018-11-18 10:19:30.265 INFO  (searcherExecutor-7-thread-1-processing-x:biblio) [   x:biblio] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@2908b7bd[biblio] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-11-18 10:19:30.376 INFO  (searcherExecutor-7-thread-1-processing-x:biblio) [   x:biblio] o.a.s.c.S.Request [biblio]  webapp=null path=null params={q=science+art+business+engineering+history&facet.field=format&distrib=false&fq=format:book&event=firstSearcher} hits=0 status=0 QTime=109
+2018-11-18 10:19:30.377 INFO  (searcherExecutor-7-thread-1-processing-x:biblio) [   x:biblio] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-11-18 10:19:30.377 INFO  (searcherExecutor-7-thread-1-processing-x:biblio) [   x:biblio] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-11-18 10:19:30.378 INFO  (searcherExecutor-7-thread-1-processing-x:biblio) [   x:biblio] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: basicSpell
+2018-11-18 10:19:30.384 INFO  (searcherExecutor-7-thread-1-processing-x:biblio) [   x:biblio] o.a.s.c.SolrCore [biblio] Registered new searcher Searcher@2908b7bd[biblio] main{ExitableDirectoryReader(UninvertingDirectoryReader())}

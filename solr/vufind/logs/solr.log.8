@@ -1,0 +1,47 @@
+2018-11-18 10:32:28.914 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.8.v20171121, build timestamp: 2017-11-21T21:27:37Z, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2018-11-18 10:32:30.826 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 7.3.1
+2018-11-18 10:32:30.827 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8088
+2018-11-18 10:32:30.827 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /usr/local/vufind/solr/vendor
+2018-11-18 10:32:30.916 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-11-18T10:32:30.829Z
+2018-11-18 10:32:30.951 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-11-18 10:32:31.250 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /usr/local/vufind/solr/vufind
+2018-11-18 10:32:31.275 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /usr/local/vufind/solr/vufind/solr.xml
+2018-11-18 10:32:34.586 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 4 core definitions underneath /usr/local/vufind/solr/vufind
+2018-11-18 10:32:34.587 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [authority, biblio, reserves, website]
+2018-11-18 10:32:34.629 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-11-18 10:32:34.872 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrResourceLoader [biblio] Added 14 libs to classloader, from paths: [/usr/local/vufind/solr/vendor/contrib/analysis-extras/lib, /usr/local/vufind/solr/vendor/contrib/analysis-extras/lucene-libs, /usr/local/vufind/solr/vufind/jars]
+2018-11-18 10:32:34.878 INFO  (main) [   ] o.e.j.s.Server Started @7072ms
+2018-11-18 10:32:37.076 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.3.1
+2018-11-18 10:32:37.770 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.s.IndexSchema [biblio] Schema name=VuFind Bibliographic Index
+2018-11-18 10:32:38.221 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.s.IndexSchema Loaded schema VuFind Bibliographic Index/1.2 with uniqueid field id
+2018-11-18 10:32:38.422 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.CoreContainer Creating SolrCore 'biblio' using configuration from instancedir /usr/local/vufind/solr/vufind/biblio, trusted=true
+2018-11-18 10:32:38.490 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-11-18 10:32:38.497 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrCore [[biblio] ] Opening new SolrCore at [/usr/local/vufind/solr/vufind/biblio], dataDir=[/usr/local/vufind/solr/vufind/biblio/]
+2018-11-18 10:32:38.553 ERROR (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrCore [biblio] Solr index directory '/usr/local/vufind/solr/vufind/biblio/index/' is locked (lockType=native).  Throwing exception.
+2018-11-18 10:32:38.553 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.c.SolrCore [biblio]  CLOSING SolrCore org.apache.solr.core.SolrCore@31e721ec
+2018-11-18 10:32:38.553 INFO  (coreLoadExecutor-6-thread-1) [   x:biblio] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.biblio, tag=837231084
+2018-11-18 10:32:38.646 ERROR (coreContainerWorkExecutor-2-thread-1) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be loaded on startup
+org.apache.solr.common.SolrException: Unable to create core [biblio]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1061)
+	at org.apache.solr.core.CoreContainer.lambda$load$13(CoreContainer.java:640)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:188)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Index dir '/usr/local/vufind/solr/vufind/biblio/index/' of core 'biblio' is already locked. The most likely cause is another Solr server (or another solr core in this server) also configured to use this directory; other possible causes may be specific to lockType: native
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1008)
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:863)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1040)
+	... 7 more
+Caused by: org.apache.lucene.store.LockObtainFailedException: Index dir '/usr/local/vufind/solr/vufind/biblio/index/' of core 'biblio' is already locked. The most likely cause is another Solr server (or another solr core in this server) also configured to use this directory; other possible causes may be specific to lockType: native
+	at org.apache.solr.core.SolrCore.initIndex(SolrCore.java:745)
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:954)
+	... 9 more
+2018-11-18 10:32:57.728 INFO  (qtp885951223-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1542537177383} status=0 QTime=195
+2018-11-18 10:32:57.992 INFO  (qtp885951223-32) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1542537177384} status=0 QTime=458
+2018-11-18 10:32:58.062 INFO  (qtp885951223-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1542537177384} status=0 QTime=19
+2018-11-18 10:34:23.529 INFO  (qtp885951223-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1542537263733} status=0 QTime=0
+2018-11-18 10:34:23.616 INFO  (qtp885951223-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1542537263737} status=0 QTime=83
+2018-11-18 10:34:23.643 INFO  (qtp885951223-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1542537263737} status=0 QTime=18
